@@ -118,17 +118,18 @@
     </div>
 
     <h3 class="menu__subtitle">Напитки от автора</h3>
+    <p class="menu__note menu__note--hint">Нажмите на напиток, чтобы узнать о нём больше</p>
     <div class="menu__table-wrap">
       <table class="menu__table">
         <thead>
           <tr><th>Напиток</th><th>M, 350 мл</th><th>L, 450 мл</th><th>XL, 550 мл</th></tr>
         </thead>
         <tbody>
-          <tr><td>Раф «Кокосовый пломбир»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
-          <tr><td>Раф «Солёный баноффи»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
-          <tr><td>Раф «Малиновый баунти»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
-          <tr><td>Латте / капучино «Шотландский виски с пряностями»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
-          <tr><td>Капучино / латте «Халва»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
+          <tr class="menu__row--clickable" data-drink="raf-coconut-plombir"><td>Раф «Кокосовый пломбир»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
+          <tr class="menu__row--clickable" data-drink="raf-banoffee"><td>Раф «Солёный баноффи»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
+          <tr class="menu__row--clickable" data-drink="raf-bounty"><td>Раф «Малиновый баунти»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
+          <tr class="menu__row--clickable" data-drink="latte-whisky"><td>Латте / капучино «Шотландский виски с пряностями»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
+          <tr class="menu__row--clickable" data-drink="cappuccino-halva"><td>Капучино / латте «Халва»</td><td>310 ₽</td><td>350 ₽</td><td>390 ₽</td></tr>
         </tbody>
       </table>
     </div>
@@ -204,5 +205,28 @@
   </div>
 </footer>
 
+<div class="drink-modal" id="drinkModal" hidden>
+  <div class="drink-modal__overlay" data-close></div>
+  <div class="drink-modal__card">
+    <button class="drink-modal__close" data-close aria-label="Закрыть">&times;</button>
+    <img class="drink-modal__photo" id="drinkModalPhoto" src="" alt="">
+    <div class="drink-modal__body">
+      <h3 class="drink-modal__title" id="drinkModalTitle"></h3>
+      <p class="drink-modal__price" id="drinkModalPrice"></p>
+      <p class="drink-modal__desc" id="drinkModalDesc"></p>
+      <div class="drink-modal__related">
+        <h4>Может понравиться</h4>
+        <ul id="drinkModalRelated"></ul>
+      </div>
+      <div class="drink-modal__visit">
+        <h4>Как до нас добраться</h4>
+        <p>г. Сургут, ул. Рыбников, д. 5 · набережная у сквера Речников</p>
+        <a href="https://yandex.ru/maps/?text=Сургут%20ул.%20Рыбников%205%20Чашка%20кофе" target="_blank" rel="noopener" class="btn btn--accent">Маршрут на карте</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/menu-modal.js"></script>
 </body>
 </html>
